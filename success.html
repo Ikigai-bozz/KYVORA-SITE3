@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYVORA | Order Successful</title>
+
+<style>
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f8fafc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    margin:0;
+}
+
+.success-card{
+    background:white;
+    padding:50px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    max-width:500px;
+}
+
+.success-icon{
+    font-size:70px;
+}
+
+h1{
+    margin:20px 0;
+}
+
+.order-id{
+    background:#f1f5f9;
+    padding:12px;
+    border-radius:10px;
+    margin:20px 0;
+    font-weight:bold;
+}
+
+.shop-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 24px;
+    border-radius:12px;
+    background:#0f172a;
+    color:white;
+    text-decoration:none;
+}
+
+</style>
+</head>
+<body>
+
+<div class="success-card">
+
+<div class="success-icon">🎉</div>
+
+<h1>Order Successful!</h1>
+
+<p id="thank-you-message">
+Thank you for shopping with KYVORA.
+</p>
+
+<div class="order-id" id="order-id">
+Order ID: Loading...
+</div>
+
+<p>
+Estimated Delivery:
+2-5 Business Days
+</p>
+
+<a href="shop.html" class="shop-btn">
+Continue Shopping
+</a>
+
+</div>
+
+<script>
+
+    const customerName =
+localStorage.getItem(
+    "customerName"
+);
+
+if(customerName){
+
+    document.getElementById(
+        "thank-you-message"
+    ).textContent =
+    `Thank you, ${customerName}!`;
+
+}
+
+const orderNumber =
+"KYV-" +
+Math.floor(
+100000 + Math.random() * 900000
+);
+
+document.getElementById(
+"order-id"
+).textContent =
+"Order ID: " + orderNumber;
+
+</script>
+
+</body>
+</html>

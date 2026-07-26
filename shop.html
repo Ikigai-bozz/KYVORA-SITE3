@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYVORA | Shop Our Collection</title>
+    <meta name="description" content="Browse KYVORA's catalog of premium electronics and accessories.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <div class="topbar">Free shipping on orders over $50 • 30-day returns • Secure checkout</div>
+
+    <div class="container">
+        <nav>
+            <div class="brand-wrap">
+                <h1><a href="index.html" class="brand-link" aria-label="KYVORA homepage">KYVORA</a></h1>
+                <p class="tagline">Technology Made Simple.</p>
+            </div>
+            <input type="checkbox" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <label for="nav-toggle" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" aria-current="page">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="cart-icon" id="cart-btn">🛒
+    <span id="cart-count">0</span>
+</div>
+
+        </nav>
+    </div>
+
+    <section class="hero shop-hero">
+        <div class="container hero-content">
+            <span class="hero-label">Catalog</span>
+            <h2>Shop Our Collection</h2>
+            <p>Discover premium electronics, accessories, and smart devices built for modern living.</p>
+        </div>
+    </section>
+</header>
+
+<main class="container">
+    <section class="catalog-panel">
+        <div class="catalog-top">
+            <div class="filter-group" role="group" aria-label="Product category filters">
+                <button type="button" class="category-button active" data-category="all">All</button>
+                <button type="button" class="category-button" data-category="laptops">Laptops</button>
+                <button type="button" class="category-button" data-category="smartphones">Smartphones</button>
+                <button type="button" class="category-button" data-category="accessories">Accessories</button>
+                <button type="button" class="category-button" data-category="audio">Audio</button>
+                <button type="button" class="category-button" data-category="gaming">Gaming</button>
+                <button type="button" class="category-button" data-category="smart-home">Smart Home</button>
+            </div>
+            <div class="search-sort">
+                <input type="search" id="product-search" class="search-bar" placeholder="Search products" aria-label="Search products by name">
+                <select id="sort-options" class="sort-select" aria-label="Sort products">
+                    <option value="newest">Newest</option>
+                    <option value="price-low">Price Low to High</option>
+                    <option value="price-high">Price High to Low</option>
+                    <option value="best-selling">Best Selling</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="section-intro">
+            <p>Shop with confidence</p>
+            <h2>Find the perfect tech for your lifestyle</h2>
+        </div>
+
+        <div class="shop-grid" id="product-grid">
+            <article class="product-card" data-category="laptops" data-name="Ultra Laptop" data-price="1299" data-date="2026-06-01" data-popularity="88">
+                <div class="product-image-wrapper" data-icon="laptops">
+                    <img src="images/products/ultra-laptop.jpg" alt="Ultra Laptop — high-performance laptop for work and creativity" loading="lazy">
+                </div>
+
+                <div class="sale-badge">SALE</div>
+                <h3>Ultra Laptop</h3>
+
+                <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                <div class="stock-badge">✓ In Stock</div>
+
+                <p class="product-copy">Premium performance for work, creativity, and everyday productivity.</p>
+                <p class="price">$1299</p>
+
+                <div class="product-actions">
+                    <a class="button button-secondary" href="#" role="button">View Details</a>
+                    <button
+    type="button"
+    class="button add-to-cart"
+    data-name="Ultra Laptop"
+    data-price="1299">
+    Add to Cart
+</button>
+                </div>
+            </article>
+            <article class="product-card" data-category="smartphones" data-name="Smart Phone X" data-price="899" data-date="2026-05-18" data-popularity="91">
+                <div class="product-image-wrapper" data-icon="smartphones">
+                    <img src="images/products/smartphone-x.jpg" alt="Smart Phone X — sleek smartphone with long battery life" loading="lazy">
+                </div>
+
+                <div class="sale-badge">SALE</div>
+                <h3>Smart Phone X</h3>
+                <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                <div class="stock-badge">✓ In Stock</div>
+
+                <p class="product-copy">Sleek display, fast processor, and all-day battery in one premium package.</p>
+                <p class="price">$899</p>
+                <div class="product-actions">
+                    <a class="button button-secondary" href="#" role="button">View Details</a>
+                    <button
+    type="button"
+    class="button add-to-cart"
+    data-name="Smart Phone X"
+    data-price="899">
+    Add to Cart
+</button>
+                </div>
+            </article>
+            <article class="product-card" data-category="accessories" data-name="Portable Charger" data-price="49" data-date="2026-04-12" data-popularity="73">
+                <div class="product-image-wrapper" data-icon="accessories">
+                    <img src="images/products/portable-charger.jpg" alt="Portable Charger — high-speed power bank for travel" loading="lazy">
+                </div>
+
+                <div class="sale-badge">SALE</div>
+                <h3>Portable Charger</h3>
+                <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                <div class="stock-badge">✓ In Stock</div>
+
+                <p class="product-copy">Fast charging power for your devices when you're on the move.</p>
+                <p class="price">$49</p>
+                <div class="product-actions">
+                    <a class="button button-secondary" href="#" role="button">View Details</a>
+                    <button
+    type="button"
+    class="button add-to-cart"
+    data-name="Portable Charger"
+    data-price="49">
+    Add to Cart
+</button>
+                </div>
+            </article>
+            <article class="product-card" data-category="audio" data-name="Wireless Earbuds" data-price="129" data-date="2026-03-28" data-popularity="82">
+                <div class="product-image-wrapper" data-icon="audio">
+                    <img src="images/products/wireless-earbuds.jpg" alt="Wireless Earbuds — comfortable fit with crystal clear sound" loading="lazy">
+                </div>
+
+                <div class="sale-badge">SALE</div>
+                <h3>Wireless Earbuds</h3>
+                <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                <div class="stock-badge">✓ In Stock</div>
+
+                <p class="product-copy">Comfortable fit and crystal-clear audio for music and calls.</p>
+                <p class="price">$129</p>
+                <div class="product-actions">
+                    <a class="button button-secondary" href="#" role="button">View Details</a>
+                    <button
+    type="button"
+    class="button add-to-cart"
+    data-name="Wireless Earbuds"
+    data-price="129">
+    Add to Cart
+</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="gaming" data-name="Gaming Keyboard" data-price="99" data-date="2026-05-04" data-popularity="79">
+                <div class="product-image-wrapper" data-icon="gaming">
+                    <img src="images/products/gaming-keyboard.jpg" alt="Gaming Keyboard — mechanical keys with customizable lighting" loading="lazy">
+                </div>
+
+                <div class="sale-badge">SALE</div>
+                <h3>Gaming Keyboard</h3>
+                <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                <div class="stock-badge">✓ In Stock</div>
+
+                <p class="product-copy">Responsive mechanical keys with customizable lighting effects.</p>
+                <p class="price">$99</p>
+                <div class="product-actions">
+                    <a class="button button-secondary" href="#" role="button">View Details</a>
+                    <button
+    type="button"
+    class="button add-to-cart"
+    data-name="Gaming Keyboard"
+    data-price="99">
+    Add to Cart
+</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="smart-home" data-name="Smart Security Cam" data-price="139" data-date="2026-02-10" data-popularity="86">
+                <div class="product-image-wrapper" data-icon="smart-home">
+                    <img src="images/products/smart-security-camera.jpg" alt="Smart Security Camera — HD monitoring with smart alerts" loading="lazy">
+                </div>
+
+                <div class="sale-badge">SALE</div>
+                <h3>Smart Security Cam</h3>
+                <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                <div class="stock-badge">✓ In Stock</div>
+
+                <p class="product-copy">Monitor your home with smart alerts and easy setup.</p>
+                <p class="price">$139</p>
+                <div class="product-actions">
+                    <a class="button button-secondary" href="#" role="button">View Details</a>
+                    <button
+    type="button"
+    class="button add-to-cart"
+    data-name="Smart Security Cam"
+    data-price="139">
+    Add to Cart
+</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="audio" data-name="Noise Cancelling Headset" data-price="199" data-date="2026-05-22" data-popularity="90">
+                <div class="product-image-wrapper" data-icon="audio">
+                    <img src="images/products/noise-cancelling-headset.jpg" alt="Noise Cancelling Headset — immersive sound and premium comfort" loading="lazy">
+                </div>
+
+                <div class="sale-badge">SALE</div>
+                <h3>Noise Cancelling Headset</h3>
+                <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                <div class="stock-badge">✓ In Stock</div>
+
+                <p class="product-copy">Immersive sound and premium comfort for long listening sessions.</p>
+                <p class="price">$199</p>
+                <div class="product-actions">
+                    <a class="button button-secondary" href="#" role="button">View Details</a>
+                    <button
+    type="button"
+    class="button add-to-cart"
+    data-name="Noise Cancelling Headset"
+    data-price="199">
+    Add to Cart
+</button>
+                </div>
+            </article>
+
+            <!-- Pro Gaming Monitor card is placed after Laptop Backpack. -->
+            <!-- Additional product cards to reference all provided filenames -->
+            <article class="product-card" data-category="gaming" data-name="Gaming Mouse" data-price="59" data-date="2026-05-12" data-popularity="80">
+                <div class="product-image-wrapper" data-icon="gaming">
+                    <img src="images/products/gaming-mouse.jpg" alt="Gaming Mouse — high-precision ergonomic mouse" loading="lazy">
+                </div>
+
+                <div class="sale-badge">SALE</div>
+                <h3>Gaming Mouse</h3>
+                <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                <div class="stock-badge">✓ In Stock</div>
+
+                <p class="product-copy">Precision sensor and customizable buttons for competitive play.</p>
+                <p class="price">$59</p>
+                <div class="product-actions">
+                    <a class="button button-secondary" href="#" role="button">View Details</a>
+                    <button
+    type="button"
+    class="button add-to-cart"
+    data-name="Gaming Mouse"
+    data-price="59">
+    Add to Cart
+</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="audio" data-name="Bluetooth Speaker" data-price="79" data-date="2026-04-08" data-popularity="75">
+                <div class="product-image-wrapper" data-icon="audio">
+                    <img src="images/products/bluetooth-speaker.jpg" alt="Bluetooth Speaker — portable speaker with rich bass" loading="lazy">
+                </div>
+
+                <div class="sale-badge">SALE</div>
+                <h3>Bluetooth Speaker</h3>
+                <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                <div class="stock-badge">✓ In Stock</div>
+
+                <p class="product-copy">Portable design with clear sound and deep bass.</p>
+                <p class="price">$79</p>
+                <div class="product-actions">
+                    <a class="button button-secondary" href="#" role="button">View Details</a>
+                    <button
+    type="button"
+    class="button add-to-cart"
+    data-name="Bluetooth Speaker"
+    data-price="79">
+    Add to Cart
+</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="accessories" data-name="Smart Watch" data-price="199" data-date="2026-05-02" data-popularity="83">
+                <div class="product-image-wrapper" data-icon="smartphones">
+                    <img src="images/products/smartwatch.jpg" alt="Smartwatch — fitness tracking and notifications" loading="lazy">
+                </div>
+
+                <div class="sale-badge">SALE</div>
+                <h3>Smart Watch</h3>
+                <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                <div class="stock-badge">✓ In Stock</div>
+
+                <p class="product-copy">Stay connected with activity tracking and stylish design.</p>
+                <p class="price">$199</p>
+                <div class="product-actions">
+                    <a class="button button-secondary" href="#" role="button">View Details</a>
+                    <button
+    type="button"
+    class="button add-to-cart"
+    data-name="Smart Watch Pro"
+    data-price="199">
+    Add to Cart
+</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="accessories" data-name="Wireless Charger" data-price="39" data-date="2026-03-03" data-popularity="68">
+                <div class="product-image-wrapper" data-icon="accessories">
+                    <img src="images/products/wireless-charger.jpg" alt="Wireless Charger — fast wireless charging pad" loading="lazy">
+                </div>
+
+                <div class="sale-badge">SALE</div>
+                <h3>Wireless Charger</h3>
+                <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                <div class="stock-badge">✓ In Stock</div>
+
+                <p class="product-copy">Convenient charging without cords for compatible devices.</p>
+                <p class="price">$39</p>
+                <div class="product-actions">
+                    <a class="button button-secondary" href="#" role="button">View Details</a>
+                    <button
+    type="button"
+    class="button add-to-cart"
+    data-name="Wireless Charger"
+    data-price="39">
+    Add to Cart
+</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="accessories" data-name="External SSD" data-price="149" data-date="2026-04-20" data-popularity="70">
+                <div class="product-image-wrapper" data-icon="accessories">
+                    <img src="images/products/external-ssd.jpg" alt="External SSD — fast portable storage" loading="lazy">
+                </div>
+
+                <div class="sale-badge">SALE</div>
+                <h3>External SSD</h3>
+                <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                <div class="stock-badge">✓ In Stock</div>
+
+                <p class="product-copy">High-speed external storage for backups and media.</p>
+                <p class="price">$149</p>
+                <div class="product-actions">
+                    <a class="button button-secondary" href="#" role="button">View Details</a>
+                    <button
+    type="button"
+    class="button add-to-cart"
+    data-name="External SSD"
+    data-price="149">
+    Add to Cart
+</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="accessories" data-name="USB-C Dock" data-price="119" data-date="2026-01-15" data-popularity="65">
+                <div class="product-image-wrapper" data-icon="accessories">
+                    <img src="images/products/usb-c-dock.jpg" alt="USB-C Dock — expand your laptop ports" loading="lazy">
+                </div>
+
+                <div class="sale-badge">SALE</div>
+                <h3>USB-C Dock</h3>
+                <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                <div class="stock-badge">✓ In Stock</div>
+
+                <p class="product-copy">Add ports and connectivity with a single USB-C connection.</p>
+                <p class="price">$119</p>
+                <div class="product-actions">
+                    <a class="button button-secondary" href="#" role="button">View Details</a>
+                    <button
+    type="button"
+    class="button add-to-cart"
+    data-name="USB-C Dock"
+    data-price="119">
+    Add to Cart
+</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="accessories" data-name="Webcam" data-price="69" data-date="2026-02-22" data-popularity="64">
+                <div class="product-image-wrapper" data-icon="accessories">
+                    <img src="images/products/webcam.jpg" alt="Webcam — sharp video for calls and streaming" loading="lazy">
+                </div>
+
+                <div class="sale-badge">SALE</div>
+                <h3>Webcam</h3>
+                <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                <div class="stock-badge">✓ In Stock</div>
+
+                <p class="product-copy">Crystal-clear video for meetings and live streams.</p>
+                <p class="price">$69</p>
+                <div class="product-actions">
+                    <a class="button button-secondary" href="#" role="button">View Details</a>
+                    <button
+    type="button"
+    class="button add-to-cart"
+    data-name="Webcam"
+    data-price="69">
+    Add to Cart
+</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="accessories" data-name="Laptop Backpack" data-price="89" data-date="2026-03-08" data-popularity="72">
+                <div class="product-image-wrapper" data-icon="accessories">
+                    <img src="images/products/laptop-backpack.jpg" alt="Laptop Backpack — durable travel backpack with padded laptop compartment" loading="lazy">
+                </div>
+
+                <div class="sale-badge">SALE</div>
+                <h3>Laptop Backpack</h3>
+                <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                <div class="stock-badge">✓ In Stock</div>
+
+                <p class="product-copy">Comfortable, water-resistant backpack with multiple compartments.</p>
+                <p class="price">$89</p>
+                <div class="product-actions">
+                    <a class="button button-secondary" href="#" role="button">View Details</a>
+                    <button
+    type="button"
+    class="button add-to-cart"
+    data-name="Laptop Backpack"
+    data-price="89">
+    Add to Cart
+</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="gaming" data-name="Pro Gaming Monitor" data-price="329" data-date="2026-04-30" data-popularity="84">
+                <div class="product-image-wrapper" data-icon="gaming">
+                    <img src="images/products/gaming-monitor.jpg" alt="Pro Gaming Monitor" loading="lazy">
+                </div>
+                <div class="sale-badge">SALE</div>
+                <h3>Pro Gaming Monitor</h3>
+                <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                <div class="stock-badge">✓ In Stock</div>
+
+                <p class="product-copy">Fast refresh rates and crisp visuals for immersive gaming.</p>
+                <p class="price">$329</p>
+                <div class="product-actions">
+                    <a class="button button-secondary" href="#" role="button">View Details</a>
+                    <button
+    type="button"
+    class="button add-to-cart"
+    data-name="Pro Gaming Monitor"
+    data-price="329">
+    Add to Cart
+</button>
+                </div>
+            </article>
+        </div>
+        <div class="no-results" id="no-results" aria-live="polite" hidden>No products match your search. Try a different category or keyword.</div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-grid container">
+        <div>
+            <h3>KYVORA</h3>
+            <p>Technology made simple, delivered with fast shipping and friendly support.</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-social" aria-label="KYVORA social media">
+            <a href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.5.7-1.5 1.5V12h2.6l-.4 3h-2.2v7A10 10 0 0 0 22 12"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37a4 4 0 1 1-7.94 1.26A4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="X Twitter">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.43 1s-4.07.07-6.3 2.75A4.48 4.48 0 0 0 12 4.7a4.48 4.48 0 0 0-.1 1.02A12.94 12.94 0 0 1 2 2.9s-4 7 .5 11.5a13 13 0 0 1-7 2c9 5.5 19.5 0 19.5-11.5V6.5A7 7 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 4.98 8.5 2.5 2.5 0 0 1 4.98 3.5zM2 9h6v12H2zM10 9h5.5v1.7h.1c.8-1.4 2.7-2.9 5.5-2.9 5.9 0 7 3.9 7 8.9V21h-6v-7.3c0-1.7 0-3.9-2.5-3.9-2.5 0-2.8 1.9-2.8 3.8V21H10z"/></svg>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<div class="cart-sidebar" id="cart-sidebar">
+
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart">&times;</button>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-footer">
+    <h3>Total: $<span id="cart-total">0</span></h3>
+    <a href="checkout.html" class="checkout-btn">
+    Checkout
+</a>
+</div>
+
+</div>
+
+<script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    navToggle.addEventListener('change', () => {
+        navToggle.setAttribute('aria-expanded', navToggle.checked);
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navToggle.checked) {
+                navToggle.checked = false;
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+
+    const categoryButtons = document.querySelectorAll('.category-button');
+    const searchInput = document.getElementById('product-search');
+    const sortSelect = document.getElementById('sort-options');
+    const productGrid = document.getElementById('product-grid');
+    const productCards = Array.from(document.querySelectorAll('.product-card'));
+
+    function updateProducts() {
+        const query = searchInput.value.trim().toLowerCase();
+        const selectedCategory = document.querySelector('.category-button.active').dataset.category;
+        const sortType = sortSelect.value;
+
+        const filtered = productCards.filter(card => {
+            const title = card.dataset.name.toLowerCase();
+            const category = card.dataset.category;
+            const matchesCategory = selectedCategory === 'all' || category === selectedCategory;
+            const matchesSearch = query === '' || title.includes(query);
+            return matchesCategory && matchesSearch;
+        });
+
+        filtered.sort((a, b) => {
+            if (sortType === 'price-low') {
+                return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
+            }
+            if (sortType === 'price-high') {
+                return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
+            }
+            if (sortType === 'best-selling') {
+                return parseFloat(b.dataset.popularity) - parseFloat(a.dataset.popularity);
+            }
+            return new Date(b.dataset.date) - new Date(a.dataset.date);
+        });
+
+        productGrid.innerHTML = '';
+        filtered.forEach(card => productGrid.appendChild(card));
+        updateNoResults(filtered.length);
+    }
+
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            categoryButtons.forEach(item => item.classList.remove('active'));
+            button.classList.add('active');
+            updateProducts();
+        });
+    });
+
+    searchInput.addEventListener('input', updateProducts);
+    sortSelect.addEventListener('change', updateProducts);
+
+    function updateNoResults(count) {
+        const noResults = document.getElementById('no-results');
+        noResults.hidden = count > 0;
+    }
+
+    updateProducts();
+    
+const cartBtn = document.getElementById('cart-btn');
+const cartSidebar = document.getElementById('cart-sidebar');
+const closeCart = document.getElementById('close-cart');
+
+cartBtn.addEventListener('click', () => {
+    cartSidebar.classList.add('active');
+});
+
+closeCart.addEventListener('click', () => {
+    cartSidebar.classList.remove('active');
+});
+
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+const cartItemsContainer = document.getElementById('cart-items');
+const cartTotal = document.getElementById('cart-total');
+const cartCount = document.getElementById('cart-count');
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+
+        const name = button.dataset.name;
+        const price = Number(button.dataset.price);
+
+        const existingItem = cart.find(item => item.name === name);
+
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push({
+                name,
+                price,
+                quantity: 1
+            });
+        }
+
+        updateCart();
+    });
+});
+
+function updateCart() {
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    cartItemsContainer.innerHTML = '';
+
+    let total = 0;
+    let count = 0;
+
+    cart.forEach(item => {
+
+        total += item.price * item.quantity;
+        count += item.quantity;
+
+        cartItemsContainer.innerHTML += `
+<div class="cart-item">
+
+    <strong>${item.name}</strong><br>
+    $${item.price}
+
+    <div class="qty-controls">
+
+        <button class="qty-btn minus"
+            data-name="${item.name}">
+            −
+        </button>
+
+        <span>${item.quantity}</span>
+
+        <button class="qty-btn plus"
+            data-name="${item.name}">
+            +
+        </button>
+
+    </div>
+
+    <button class="remove-item"
+        data-name="${item.name}">
+        ✕ Remove
+    </button>
+
+    <hr>
+
+</div>
+`;
+    });
+
+    cartTotal.textContent = total;
+    cartCount.textContent = count;
+
+    document.querySelectorAll('.plus').forEach(btn => {
+
+    btn.addEventListener('click', () => {
+
+        const item = cart.find(
+            p => p.name === btn.dataset.name
+        );
+
+        item.quantity++;
+
+        updateCart();
+
+    });
+
+});
+
+document.querySelectorAll('.minus').forEach(btn => {
+
+    btn.addEventListener('click', () => {
+
+        const item = cart.find(
+            p => p.name === btn.dataset.name
+        );
+
+        if (item.quantity > 1) {
+            item.quantity--;
+        }
+
+        updateCart();
+
+    });
+
+});
+
+
+    document.querySelectorAll('.remove-item').forEach(btn => {
+
+    btn.addEventListener('click', () => {
+
+        const itemName = btn.dataset.name;
+
+        cart = cart.filter(item => item.name !== itemName);
+
+        updateCart();
+
+    });
+
+});
+}
+updateCart();
+
+</script>
+
+
+
+</body>
+</html>
