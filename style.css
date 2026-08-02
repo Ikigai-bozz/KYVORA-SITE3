@@ -1,4 +1,8 @@
-﻿:root {
+﻿/* ==========================================================
+   GLOBAL STYLES
+========================================================== */
+
+:root {
   --accent: #2563eb;
   --accent-soft: #dbeafe;
   --surface: #ffffff;
@@ -69,6 +73,10 @@ h4 {
   width: min(1200px, calc(100% - 40px));
   margin: 0 auto;
 }
+
+/* ==========================================================
+   HEADER & NAVIGATION
+========================================================== */
 
 .topbar {
   background: var(--accent);
@@ -206,6 +214,10 @@ nav a[aria-current="page"] {
 #nav-toggle:checked + .menu-toggle span:nth-child(3) {
   transform: translateY(-10px) rotate(-45deg);
 }
+
+/* ==========================================================
+   HOME PAGE
+========================================================== */
 
 .hero {
   position: relative;
@@ -533,6 +545,10 @@ nav a[aria-current="page"] {
   height: 24px;
 }
 
+/* ==========================================================
+   SHOP PAGE
+========================================================== */
+
 .catalog-panel {
   margin-top: 72px;
   background: var(--surface);
@@ -622,6 +638,10 @@ nav a[aria-current="page"] {
   grid-template-columns: repeat(4, minmax(240px, 1fr));
   gap: 24px;
 }
+
+/* ==========================================================
+   PRODUCT CARDS
+========================================================== */
 
 .no-results {
   padding: 28px 18px;
@@ -805,6 +825,10 @@ nav a[aria-current="page"] {
   font-weight: 700;
   margin-bottom: 20px;
 }
+
+/* ==========================================================
+   CONTACT PAGE
+========================================================== */
 
 .contact {
   background: var(--surface);
@@ -1175,6 +1199,10 @@ nav a[aria-current="page"] {
   transform: translateY(-2px);
 }
 
+/* ==========================================================
+   FOOTER
+========================================================== */
+
 footer {
   padding: 36px 0 40px;
   color: #e2e8f0;
@@ -1409,6 +1437,10 @@ footer h3 {
   box-shadow: none !important;
   transform: none !important;
 }
+
+/* ==========================================================
+   ABOUT PAGE
+========================================================== */
 
 .about-page .about-hero {
   padding: 100px 20px 120px;
@@ -1808,6 +1840,246 @@ footer h3 {
   font-size: 1rem;
 }
 
+/* ==========================================================
+   CHECKOUT PAGE
+========================================================== */
+
+.checkout-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
+}
+
+.checkout-form,
+.order-summary {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.checkout-form h2,
+.order-summary h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 120px;
+}
+
+.place-order-btn {
+  width: 100%;
+  padding: 16px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 12px;
+  background: #0f172a;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.place-order-btn:hover {
+  background: #1e293b;
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.place-order-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.summary-total {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.payment-option:hover {
+  border-color: #2563eb;
+  background: #f8fafc;
+}
+
+.payment-option input {
+  width: auto;
+  margin: 0;
+}
+
+.payment-option label {
+  margin: 0;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#bank-transfer-details {
+  display: none;
+}
+
+.bank-transfer-box {
+  margin-top: 20px;
+  padding: 18px;
+  background: #f8fafc;
+  border: 2px solid #0f172a20;
+  border-radius: 12px;
+}
+
+.bank-transfer-box h3 {
+  margin-top: 0;
+  color: #0f172a;
+}
+
+.bank-transfer-box p {
+  margin: 10px 0;
+}
+
+.bank-note {
+  color: #475569;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.bank-account-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.copy-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #0f172a;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: .3s;
+}
+
+.copy-btn:hover {
+  background: #1e293b;
+}
+
+/* ==========================================================
+   SUCCESS PAGE
+========================================================== */
+
+body:has(.success-card) {
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.success-card {
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+}
+
+.success-icon {
+  font-size: 70px;
+}
+
+body:has(.success-card) .success-card h1 {
+  margin: 20px 0;
+}
+
+.order-id {
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.shop-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 24px;
+  border-radius: 12px;
+  background: #0f172a;
+  color: white;
+  text-decoration: none;
+}
+
+.order-details {
+  text-align: left;
+  margin-top: 25px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+body:has(.success-card) .order-details p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+body:has(.success-card) .order-details strong {
+  color: #0f172a;
+}
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
 @keyframes float {
   0% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
@@ -1820,6 +2092,10 @@ footer h3 {
     opacity: 1;
   }
 }
+
+/* ==========================================================
+   RESPONSIVE DESIGN
+========================================================== */
 
 @media (max-width: 1024px) {
   .feature-grid,
