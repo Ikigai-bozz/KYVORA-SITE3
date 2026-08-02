@@ -81,34 +81,7 @@ Continue Shopping
 
 </div>
 
-<script>
-
-    const customerName =
-localStorage.getItem(
-    "customerName"
-);
-
-if(customerName){
-
-    document.getElementById(
-        "thank-you-message"
-    ).textContent =
-    `Thank you, ${customerName}!`;
-
-}
-
-const orderNumber =
-"KYV-" +
-Math.floor(
-100000 + Math.random() * 900000
-);
-
-document.getElementById(
-"order-id"
-).textContent =
-"Order ID: " + orderNumber;
-
-</script>
+<script src="js/success.js"></script>
 
 </body>
 </html>

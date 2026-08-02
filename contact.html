@@ -192,23 +192,7 @@
     </div>
 </footer>
 
-<script>
-    const navToggle = document.getElementById('nav-toggle');
-    const navLinks = document.querySelectorAll('nav ul li a');
-
-    navToggle.addEventListener('change', () => {
-        navToggle.setAttribute('aria-expanded', navToggle.checked);
-    });
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navToggle.checked) {
-                navToggle.checked = false;
-                navToggle.setAttribute('aria-expanded', 'false');
-            }
-        });
-    });
-</script>
+<script src="js/shared-nav.js"></script>
 
 </body>
 </html>

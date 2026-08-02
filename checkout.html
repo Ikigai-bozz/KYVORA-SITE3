@@ -150,23 +150,23 @@
         <h2>Customer Information</h2>
 
         <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" placeholder="John Doe">
+            <label for="customer-name">Full Name</label>
+            <input id="customer-name" type="text" placeholder="John Doe">
         </div>
 
         <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" placeholder="john@example.com">
+            <label for="customer-email">Email Address</label>
+            <input id="customer-email" type="email" placeholder="john@example.com">
         </div>
 
         <div class="form-group">
-            <label>Phone Number</label>
-            <input type="tel" placeholder="+234...">
+            <label for="customer-phone">Phone Number</label>
+            <input id="customer-phone" type="tel" placeholder="+234...">
         </div>
 
         <div class="form-group">
-            <label>Delivery Address</label>
-            <textarea placeholder="Enter delivery address"></textarea>
+            <label for="customer-address">Delivery Address</label>
+            <textarea id="customer-address" placeholder="Enter delivery address"></textarea>
         </div>
 
         <div class="form-group">
@@ -220,97 +220,7 @@
 
 </div>
 
-<script>
-
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-if(cart.length === 0){
-
-    alert(
-        "Your cart is empty."
-    );
-
-    window.location.href =
-    "shop.html";
-
-}
-
-const checkoutItems =
-document.getElementById("checkout-items");
-
-const checkoutTotal =
-document.getElementById("checkout-total");
-
-let total = 0;
-const shippingFee = 10;
-
-cart.forEach(item => {
-
-    total += item.price * item.quantity;
-
-    checkoutItems.innerHTML += `
-        <div class="summary-item">
-            <span>
-                ${item.name}
-                (x${item.quantity})
-            </span>
-            <span>
-                $${item.price * item.quantity}
-            </span>
-        </div>
-    `;
-});
-
-checkoutTotal.textContent = total + shippingFee;
-
-document
-.getElementById("place-order-btn")
-.addEventListener("click", () => {
-
-    const name =
-    document.querySelector(
-        'input[type="text"]'
-    ).value.trim();
-
-    const email =
-    document.querySelector(
-        'input[type="email"]'
-    ).value.trim();
-
-    const phone =
-    document.querySelector(
-        'input[type="tel"]'
-    ).value.trim();
-
-    const address =
-    document.querySelector(
-        'textarea'
-    ).value.trim();
-
-    if(
-        !name ||
-        !email ||
-        !phone ||
-        !address
-    ){
-        alert(
-            "Please complete all fields."
-        );
-        return;
-    }
-
-    localStorage.setItem(
-    "customerName",
-    name
-);
-
-localStorage.removeItem("cart");
-
-window.location.href =
-"success.html";
-
-});
-</script>
+<script src="js/checkout.js"></script>
 
 </body>
 </html>
