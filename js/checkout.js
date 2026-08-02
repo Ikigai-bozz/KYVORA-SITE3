@@ -105,17 +105,22 @@ stateSelect.addEventListener("change", () => {
         alert(
 `Bank Transfer
 
-Bank: Kyvora Bank
+Bank: MONIEPOINT
 
 Account Name:
 KYVORA TECHNOLOGIES
 
 Account Number:
-1234567890
+8137358529
 
 Your order will be confirmed after payment.`
         );
     }
+
+
+    // Show processing state
+placeOrderButton.disabled = true;
+placeOrderButton.textContent = "Processing Order...";
 
     // Save customer information
     localStorage.setItem("customerName", name);
@@ -124,11 +129,60 @@ Your order will be confirmed after payment.`
     localStorage.setItem("customerAddress", address);
     localStorage.setItem("customerCity", city);
     localStorage.setItem("customerState", state);
+    localStorage.setItem("paymentMethod", payment);
+    localStorage.setItem("orderTotal", total + shippingFee);
 
     localStorage.removeItem("cart");
 
+    setTimeout(() => {
     window.location.href = "success.html";
+    }, 2000);
 
 });
 
+
+// ===== Bank Transfer =====
+
+const bankRadio = document.querySelector('input[value="bank"]');
+const bankBox = document.getElementById("bank-transfer-details");
+const reference = document.getElementById("payment-reference");
+const copyAccountBtn = document.getElementById("copy-account");
+
+if (bankRadio && bankBox) {
+
+    // Show the bank details immediately
+    bankBox.style.display = "block";
+
+    // Generate payment reference
+    const paymentRef = "KYV-" + Date.now().toString().slice(-8);
+
+    reference.textContent = paymentRef;
+
+    // Save reference for success page
+    localStorage.setItem("paymentReference", paymentRef);
+}
+
 });
+
+// Copy Account Number
+
+const copyButton = document.getElementById("copy-account");
+
+if(copyButton){
+
+    copyButton.addEventListener("click",()=>{
+
+        const accountNumber =
+        document.getElementById("account-number").textContent;
+
+        navigator.clipboard.writeText(accountNumber);
+
+        copyButton.textContent="Copied ✓";
+
+        setTimeout(()=>{
+            copyButton.textContent="Copy";
+        },2000);
+
+    });
+
+}

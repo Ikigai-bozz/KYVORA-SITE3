@@ -52,6 +52,23 @@ h1{
     text-decoration:none;
 }
 
+.order-details{
+    text-align:left;
+    margin-top:25px;
+    padding:20px;
+    background:#f8fafc;
+    border-radius:12px;
+}
+
+.order-details p{
+    margin:10px 0;
+    line-height:1.5;
+}
+
+.order-details strong{
+    color:#0f172a;
+}
+
 </style>
 </head>
 <body>
@@ -70,10 +87,24 @@ Thank you for shopping with KYVORA.
 Order ID: Loading...
 </div>
 
-<p>
-Estimated Delivery:
-2-5 Business Days
-</p>
+<div class="order-details">
+
+<p><strong>Customer:</strong>
+<span id="customer-name"></span></p>
+
+<p><strong>Payment:</strong>
+<span id="payment-method"></span></p>
+
+<p><strong>Delivery Address:</strong>
+<span id="delivery-address"></span></p>
+
+<p><strong>Order Total:</strong>
+$<span id="order-total"></span></p>
+
+<p><strong>Estimated Delivery:</strong>
+2–5 Business Days</p>
+
+</div>
 
 <a href="shop.html" class="shop-btn">
 Continue Shopping

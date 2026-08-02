@@ -2142,3 +2142,30 @@ footer h3 {
     min-width: 100%;
   }
 }
+
+
+.bank-account-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:12px 0;
+    padding:12px;
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius:10px;
+}
+
+.copy-btn{
+    padding:8px 14px;
+    border:none;
+    border-radius:8px;
+    background:#0f172a;
+    color:#fff;
+    cursor:pointer;
+    font-size:14px;
+    transition:.3s;
+}
+
+.copy-btn:hover{
+    background:#1e293b;
+}

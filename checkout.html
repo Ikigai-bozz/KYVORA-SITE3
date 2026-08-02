@@ -53,15 +53,28 @@
     height:120px;
 }
 
-.place-order-btn{
-    width:100%;
-    padding:14px;
-    border:none;
-    border-radius:20px;
-    background:#0f172a;
-    color:white;
-    font-size:1rem;
-    cursor:pointer;
+.place-order-btn {
+    width: 100%;
+    padding: 16px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 12px;
+    background: #0f172a;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.place-order-btn:hover {
+    background: #1e293b;
+    transform: translateY(-2px);
+}
+
+.place-order-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
 }
 
 .place-order-btn:hover{
@@ -132,6 +145,29 @@
 .payment-option input{
     width:auto;
     margin:0;
+}
+
+.bank-transfer-box{
+    margin-top:20px;
+    padding:18px;
+    background:#f8fafc;
+    border:2px solid #0f172a20;
+    border-radius:12px;
+}
+
+.bank-transfer-box h3{
+    margin-top:0;
+    color:#0f172a;
+}
+
+.bank-transfer-box p{
+    margin:10px 0;
+}
+
+.bank-note{
+    color:#475569;
+    font-size:14px;
+    margin-top:15px;
 }
 </style>
 
@@ -236,15 +272,41 @@
 
         <label>Payment Method *</label>
 
-        <div class="payment-option">
-        <input type="radio" name="payment" value="cod" checked required>
-        <label>Cash on Delivery</label>
-     </div>
 
      <div class="payment-option">
         <input type="radio" name="payment" value="bank">
         <label>Bank Transfer</label>
         </div>
+
+        <div id="bank-transfer-details" class="bank-transfer-box" style="display:none;">
+
+    <h3>Bank Transfer Details</h3>
+
+    <p><strong>Bank:</strong> MONIEPOINT</p>
+
+    <p><strong>Account Name:</strong> KYVORA TECHNOLOGIES</p>
+
+    <div class="bank-account-row">
+    <span id="account-number">8137358529</span>
+
+    <button
+        type="button"
+        id="copy-account"
+        class="copy-btn">
+        Copy
+    </button>
+</div>
+
+    <p>
+        <strong>Reference:</strong>
+        <span id="payment-reference">Loading...</span>
+    </p>
+
+    <p class="bank-note">
+        After making payment, click "Place Order" to complete your order.
+    </p>
+
+</div>
 
         <div class="payment-option">
         <input type="radio" name="payment" value="paypal">
