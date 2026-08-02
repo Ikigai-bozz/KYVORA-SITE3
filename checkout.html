@@ -145,79 +145,148 @@
 </header>
 
 <div class="checkout-container">
-
-    <div class="checkout-form">
+    <form id="checkout-form" class="checkout-form">
         <h2>Customer Information</h2>
 
         <div class="form-group">
-            <label for="customer-name">Full Name</label>
-            <input id="customer-name" type="text" placeholder="John Doe">
+            <label for="customer-name">Full Name *</label>
+            <input id="customer-name" type="text" placeholder="John Doe" required>
         </div>
 
         <div class="form-group">
-            <label for="customer-email">Email Address</label>
-            <input id="customer-email" type="email" placeholder="john@example.com">
+            <label for="customer-email">Email Address *</label>
+            <input id="customer-email" type="email" placeholder="john@example.com" required>
         </div>
 
         <div class="form-group">
-            <label for="customer-phone">Phone Number</label>
-            <input id="customer-phone" type="tel" placeholder="+234...">
+            <label for="customer-phone">Phone Number *</label>
+            <input id="customer-phone" type="tel" placeholder="08012345678" required>
         </div>
 
         <div class="form-group">
-            <label for="customer-address">Delivery Address</label>
-            <textarea id="customer-address" placeholder="Enter delivery address"></textarea>
+            <label for="customer-address">Street Address *</label>
+            <textarea id="customer-address" placeholder="House number, street, area..." required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="customer-landmark">Landmark (optional)</label>
+            <input id="customer-landmark" type="text" placeholder="Nearest bus stop or landmark">
+        </div>
+
+        <div class="form-group">
+            <label for="delivery-note">Delivery Note</label>
+            <textarea id="delivery-note" placeholder="Extra instructions for the rider (optional)"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="customer-city">City *</label>
+            <input id="customer-city" type="text" placeholder="e.g. Ikeja" required>
+        </div>
+
+        <div class="form-group">
+            <label for="customer-state">State *</label>
+            <select id="customer-state" required>
+                <option value="">Select State</option>
+                <option value="Abia">Abia</option>
+                <option value="Adamawa">Adamawa</option>
+                <option value="Akwa Ibom">Akwa Ibom</option>
+                <option value="Anambra">Anambra</option>
+                <option value="Bauchi">Bauchi</option>
+                <option value="Bayelsa">Bayelsa</option>
+                <option value="Benue">Benue</option>
+                <option value="Borno">Borno</option>
+                <option value="Cross River">Cross River</option>
+                <option value="Delta">Delta</option>
+                <option value="Ebonyi">Ebonyi</option>
+                <option value="Edo">Edo</option>
+                <option value="Ekiti">Ekiti</option>
+                <option value="Enugu">Enugu</option>
+                <option value="FCT Abuja">FCT Abuja</option>
+                <option value="Gombe">Gombe</option>
+                <option value="Imo">Imo</option>
+                <option value="Jigawa">Jigawa</option>
+                <option value="Kaduna">Kaduna</option>
+                <option value="Kano">Kano</option>
+                <option value="Katsina">Katsina</option>
+                <option value="Kebbi">Kebbi</option>
+                <option value="Kogi">Kogi</option>
+                <option value="Kwara">Kwara</option>
+                <option value="Lagos">Lagos</option>
+                <option value="Nasarawa">Nasarawa</option>
+                <option value="Niger">Niger</option>
+                <option value="Ogun">Ogun</option>
+                <option value="Ondo">Ondo</option>
+                <option value="Osun">Osun</option>
+                <option value="Oyo">Oyo</option>
+                <option value="Plateau">Plateau</option>
+                <option value="Rivers">Rivers</option>
+                <option value="Sokoto">Sokoto</option>
+                <option value="Taraba">Taraba</option>
+                <option value="Yobe">Yobe</option>
+                <option value="Zamfara">Zamfara</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="customer-postcode">Postal Code (Optional)</label>
+            <input id="customer-postcode" type="text" placeholder="100001">
         </div>
 
         <div class="form-group">
 
-    <label>Payment Method</label>
+        <label>Payment Method *</label>
 
-    <div class="payment-option">
-    <input type="radio" name="payment" checked>
-    <label>Cash on Delivery</label>
-</div>
+        <div class="payment-option">
+        <input type="radio" name="payment" value="cod" checked required>
+        <label>Cash on Delivery</label>
+     </div>
 
-<div class="payment-option">
-    <input type="radio" name="payment">
-    <label>Bank Transfer</label>
-</div>
+     <div class="payment-option">
+        <input type="radio" name="payment" value="bank">
+        <label>Bank Transfer</label>
+        </div>
 
-<div class="payment-option">
-    <input type="radio" name="payment">
-    <label>Debit / Credit Card</label>
-</div>
+        <div class="payment-option">
+        <input type="radio" name="payment" value="paypal">
+        <label>PayPal (Coming Soon)</label>
+        </div>
 
-</div>
+        <div class="payment-option">
+        <input type="radio" name="payment" value="card">
+        <label>Debit / Credit Card (Coming Soon)</label>
+        </div>
 
-        <button
-    class="place-order-btn"
-    id="place-order-btn">
-    Place Order
-</button>
-    </div>
+        </div>
+        <button class="place-order-btn" id="place-order-btn" type="button">Place Order</button>
+    </form>
 
     <div class="order-summary">
-
         <h2>Order Summary</h2>
 
         <div id="checkout-items"></div>
 
+        <div class="summary-item">
+            <span>Subtotal</span>
+            <span>$<span id="subtotal">0</span></span>
+        </div>
+
+        <div class="summary-item">
+            <span>Delivery Fee</span>
+            <span>$<span id="delivery-fee">0</span></span>
+        </div>
+
+        <div class="summary-item">
+            <span>Discount</span>
+            <span>$<span id="discount">0</span></span>
+        </div>
+
+        <hr>
+
         <div class="summary-total">
-
-    <div class="summary-item">
-        <span>Shipping</span>
-        <span>$10</span>
+            <strong>Final Total</strong>
+            <strong>$<span id="checkout-total">0</span></strong>
+        </div>
     </div>
-
-    <hr>
-
-    Total: $<span id="checkout-total">0</span>
-
-</div>
-
-    </div>
-
 </div>
 
 <script src="js/checkout.js"></script>
