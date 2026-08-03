@@ -1,0 +1,30 @@
+[
+  {
+    "orderId": "KYV-1785796763034",
+    "name": "Ebuka Wilson",
+    "email": "willijust18@gmail.com",
+    "phone": "08137358529",
+    "address": "4 anifowoshe street",
+    "city": "Ikeja",
+    "state": "Lagos",
+    "payment": "bank",
+    "cart": [
+      {
+        "name": "Smart Phone X",
+        "price": 899,
+        "quantity": 1
+      },
+      {
+        "name": "Noise Cancelling Headset",
+        "price": 199,
+        "quantity": 1
+      },
+      {
+        "name": "Wireless Earbuds",
+        "price": 129,
+        "quantity": 1
+      }
+    ],
+    "createdAt": "2026-08-03T22:39:23.034Z"
+  }
+]
