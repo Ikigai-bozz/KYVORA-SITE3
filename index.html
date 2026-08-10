@@ -10,6 +10,12 @@
 
 <body>
 
+<div class="announcement-bar" aria-live="polite">
+    <div class="announcement-inner">
+        <span class="announcement-text is-visible" id="announcement-text">🚚 Free shipping on orders over $50 • 30-day returns •</span>
+    </div>
+</div>
+
 <header>
     <div class="container">
         <nav>
@@ -33,39 +39,125 @@
         </nav>
     </div>
 
-    <div class="topbar">Free shipping on orders over $50 • 30-day returns • Secure checkout</div>
 
+    <!-- ==========================
+    HERO SLIDER
+    ========================== -->
     <section class="hero hero-home" id="home">
-    <div class="container hero-content">
+        <div class="hero-slider" aria-label="Featured hero slides">
+            <article class="hero-slide is-active">
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <span class="hero-label">WELCOME TO KYVORA</span>
+                        <h2>Premium Technology for Modern Living.</h2>
+                        <p>
+                            Discover high-quality laptops, smartphones, audio devices,
+                            gaming accessories, and smart gadgets—all carefully selected
+                            to make everyday life smarter, faster, and easier.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="button" href="shop.html">Shop Collection</a>
+                            <a class="button button-secondary" href="#categories">Browse Categories</a>
+                        </div>
+                    </div>
 
-        <div class="hero-text">
-            <span class="hero-label">WELCOME TO KYVORA</span>
+                    <div class="hero-image">
+                        <img src="images/hero/hero-tech.png" alt="KYVORA Premium Tech" loading="eager" decoding="async">
+                    </div>
+                </div>
+            </article>
 
-            <h2>Premium Technology for Modern Living.</h2>
+            <article class="hero-slide hero-slide--gaming">
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <span class="hero-label">WELCOME TO KYVORA</span>
+                        <h2>Power Your Gaming Experience.</h2>
+                        <p>
+                            Explore gaming laptops, RGB accessories, mechanical keyboards,
+                            gaming mice and premium audio gear for a setup that performs at its best.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="button" href="shop.html">Explore Gaming</a>
+                            <a class="button button-secondary" href="#categories">Browse Categories</a>
+                        </div>
+                    </div>
 
-<p>
-    Discover high-quality laptops, smartphones, audio devices,
-    gaming accessories, and smart gadgets—all carefully selected
-    to make everyday life smarter, faster, and easier.
-</p>
+                    <div class="hero-image hero-scene hero-scene--gaming">
+                        <img alt="Gaming tech accessories" loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </article>
 
-            <div class="hero-actions">
-                <a class="button" href="shop.html">
-    Shop Collection
-</a>
+            <article class="hero-slide hero-slide--smart">
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <span class="hero-label">WELCOME TO KYVORA</span>
+                        <h2>Smart Devices. Smarter Living.</h2>
+                        <p>
+                            Upgrade your home and work with premium smart technology designed
+                            for speed, comfort and productivity in every space.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="button" href="shop.html">Discover Smart Tech</a>
+                            <a class="button button-secondary" href="#categories">Browse Categories</a>
+                        </div>
+                    </div>
 
-<a class="button button-secondary" href="#categories">
-    Browse Categories
-</a>
-            </div>
+                    <div class="hero-image hero-scene hero-scene--smart">
+                        <img alt="Modern smart devices" loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </article>
+
+            <article class="hero-slide hero-slide--audio">
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <span class="hero-label">WELCOME TO KYVORA</span>
+                        <h2>Sound That Elevates Every Moment.</h2>
+                        <p>
+                            From immersive headphones to wireless speakers, discover premium audio
+                            that brings richer sound, better focus, and more energy to your everyday routine.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="button" href="shop.html">Shop Audio</a>
+                            <a class="button button-secondary" href="#categories">Browse Categories</a>
+                        </div>
+                    </div>
+
+                    <div class="hero-image hero-scene hero-scene--smart">
+                        <img alt="Premium audio gear" loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </article>
+
+            <article class="hero-slide hero-slide--workspace">
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <span class="hero-label">WELCOME TO KYVORA</span>
+                        <h2>Built for Work, Play, and Everything In Between.</h2>
+                        <p>
+                            Find productivity-forward laptops, premium accessories, and streamlined tech
+                            that keeps your workflow smooth, organized, and ready for the next idea.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="button" href="shop.html">Build Your Setup</a>
+                            <a class="button button-secondary" href="#categories">Browse Categories</a>
+                        </div>
+                    </div>
+
+                    <div class="hero-image hero-scene hero-scene--gaming">
+                        <img alt="Tech workspace setup" loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </article>
         </div>
 
-        <div class="hero-image">
-            <img src="images/hero/hero-tech.png" alt="KYVORA Premium Tech">
+        <div class="hero-slider-controls" aria-label="Hero slider controls">
+            <button class="hero-nav-button" type="button" data-direction="prev" aria-label="Previous slide">&#10094;</button>
+            <div class="hero-dots" role="tablist" aria-label="Select hero slide"></div>
+            <button class="hero-nav-button" type="button" data-direction="next" aria-label="Next slide">&#10095;</button>
         </div>
-
-    </div>
-</section>
+    </section>
 </header>
 
 <section class="trust-bar reveal">
